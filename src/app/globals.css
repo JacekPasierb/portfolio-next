@@ -14,6 +14,7 @@ body {
   font-size: 1.6rem !important;
   position: relative;
   line-height: 1.6;
+  background-image: linear-gradient(270deg, #1b1429, #140f23);
 }
 
 .navbar {
@@ -28,7 +29,6 @@ body {
 .navbar .nav-link {
   position: relative;
   color: #fff !important;
- 
 }
 
 .navbar-nav .nav-link::after {
@@ -40,7 +40,7 @@ body {
   height: 5px; /* Wysokość linii */
   background-color: #cd5ff8; /* Kolor linii */
   border-radius: 16px;
-  transition:  all .3s ease-out 0s; /* Animacja zmiany szerokości */
+  transition: all 0.3s ease-out 0s; /* Animacja zmiany szerokości */
 }
 
 .navbar-nav .nav-link:hover::after {
@@ -57,7 +57,7 @@ body {
 }
 
 .navbar .nav-item {
-  margin-left: 20px;
+  margin-left: 32px;
 }
 
 .home-section {
@@ -78,14 +78,7 @@ body {
 
 .home-about-section {
   height: 500px;
-  background-image: linear-gradient(
-      to bottom left,
-      hsla(0, 3%, 6%, 0.678),
-      rgba(12, 10, 22, 0.863)
-    ),
-    url(../../public/home-bg.dc52d5d40a40b13154b0.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
+
   padding-bottom: 30px;
   padding-top: 30px;
 }
@@ -97,5 +90,4 @@ body {
 }
 
 @media (min-width: 992px) {
- 
 }
