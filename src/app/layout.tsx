@@ -1,6 +1,8 @@
 import type {Metadata} from "next";
 import "./globals.css";
 import {raleway} from "./ui/fonts";
+import Navigation from "./components/Navbar";
+import ParticlesBackground from "./components/ParticlesBackground";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,11 +29,14 @@ export default function RootLayout({
         ></link>
       </head>
       <body className={`${raleway.className} `}>
+        <ParticlesBackground />
+        <Navigation />
         {children}
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
           integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-          async
+          crossOrigin="anonymous"
+          defer
         ></script>
       </body>
     </html>

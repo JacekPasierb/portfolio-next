@@ -9,21 +9,105 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2d1950;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(178, 121, 216, 0.959);
+  border-radius: 12px;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(222, 130, 235, 0.911);
+}
+
 body {
   font-family: "Raleway", serif;
   font-size: 1.6rem !important;
   position: relative;
   line-height: 1.6;
   background-image: linear-gradient(270deg, #1b1429, #140f23);
+  scrollbar-color: #cd5ff8 #181a27;
+  scrollbar-width: thin;
 }
 
+/* Nawigacja */
 .navbar {
+  background-color: #181a27;
   transition: all 0.8s ease;
+}
+
+.navbar .navbar-toggler {
+  padding: 1em 2em;
+  border: none;
+  outline: none;
+}
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+/* Styl przycisku */
+.custom-toggler {
+  border: none;
+  background: none;
+  padding: 0;
+  outline: none;
+}
+
+/* Styl hamburgera */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #cd5ff8;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler:not(.collapsed) .hamburger span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.navbar-toggler:not(.collapsed) .hamburger span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler:not(.collapsed) .hamburger span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.navbar-toggler.collapsed .hamburger span:nth-child(1),
+.navbar-toggler.collapsed .hamburger span:nth-child(3) {
+  transform: rotate(0) translate(0, 0);
+}
+
+.navbar-toggler.collapsed .hamburger span:nth-child(2) {
+  opacity: 1;
 }
 
 .navbar .nav-link,
 .navbar .navbar-brand {
-  font-size: 1.9rem;
+  font-size: 2.2rem;
 }
 
 .navbar .nav-link {
@@ -32,19 +116,25 @@ body {
 }
 
 .navbar-nav .nav-link::after {
-  content: ""; /* Pusty content - tworzymy element */
-  position: absolute; /* Absolutne pozycjonowanie */
-  left: 0; /* Ustawienie od lewej krawędzi */
-  bottom: 0; /* Ustawienie od dolnej krawędzi */
-  width: 0; /* Początkowa szerokość 0 (niewidoczna) */
-  height: 5px; /* Wysokość linii */
-  background-color: #cd5ff8; /* Kolor linii */
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 5px;
+  background-color: #cd5ff8;
   border-radius: 16px;
-  transition: all 0.3s ease-out 0s; /* Animacja zmiany szerokości */
+  transition: all 0.3s ease-out 0s;
 }
 
 .navbar-nav .nav-link:hover::after {
-  width: 100%; /* Po najechaniu linia rozciąga się na całą szerokość linku */
+  width: 100%;
+}
+
+.nav-link.active {
+  color: #cd5ff8;
+  font-weight: bold;
+  border-bottom: 2px solid #cd5ff8;
 }
 
 .navbar-dark a.navbar-brand {
@@ -59,6 +149,12 @@ body {
 .navbar .nav-item {
   margin-left: 32px;
 }
+
+.nav-item i {
+  margin-right: 5px;
+}
+
+/* Home */
 
 .home-section {
   height: 500px;
@@ -83,11 +179,37 @@ body {
   padding-top: 30px;
 }
 
-.sticky {
-  backdrop-filter: blur(15px) !important;
-  background-color: #1b1a2ea9 !important;
-  box-shadow: 0 10px 10px 0 rgba(9, 5, 29, 0.171) !important;
+@media (max-width: 767px) {
+  /* Dotyczy ekranów mniejszych niż 992px */
+  .navbar-collapse {
+    text-align: center; /* Wyrównanie do środka */
+  }
+
+  .navbar-nav {
+    flex-direction: column; /* Ustawienie linków w kolumnie */
+    align-items: center; /* Centrowanie linków */
+    gap: 1rem; /* Opcjonalne odstępy między linkami */
+  }
+
+  .nav-link {
+    padding: 1rem 1.6rem !important; /* Dostosowanie paddingu dla lepszej czytelności */
+  }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
+  .navbar {
+    background-color: transparent;
+    transition: background-color 0.3s ease-in-out; /* Płynna zmiana tła */
+  }
+
+  .navbar.sticky {
+    backdrop-filter: blur(15px) !important;
+    background-color: #1b1a2ea9 !important;
+    box-shadow: 0 10px 10px 0 rgba(9, 5, 29, 0.171) !important; /* Zmiana koloru tła na ciemne po przewinięciu */
+  }
+
+  .navbar .nav-link,
+  .navbar .navbar-brand {
+    font-size: 1.9rem;
+  }
 }
