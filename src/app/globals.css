@@ -34,6 +34,7 @@ body {
   position: relative;
   line-height: 1.6;
   background-image: linear-gradient(270deg, #1b1429, #140f23);
+  color: #ffffff !important;
   scrollbar-color: #cd5ff8 #181a27;
   scrollbar-width: thin;
 }
@@ -131,10 +132,9 @@ body {
   width: 100%;
 }
 
-.nav-link.active {
-  color: #cd5ff8;
+.navbar .navbar-nav .nav-link.active {
+  color: #cd5ff8 !important;
   font-weight: bold;
-  border-bottom: 2px solid #cd5ff8;
 }
 
 .navbar-dark a.navbar-brand {
@@ -157,7 +157,6 @@ body {
 /* Home */
 
 .home-section {
-  height: 500px;
   background-image: linear-gradient(
       to bottom left,
       hsla(0, 3%, 6%, 0.678),
@@ -166,10 +165,88 @@ body {
     url(../../public/home-bg.dc52d5d40a40b13154b0.jpg);
   background-position: top;
   background-repeat: no-repeat;
-  padding-bottom: 30px;
-  padding-top: 30px;
+
+  padding: 30px 12px;
   position: relative;
   z-index: -1;
+}
+
+.home-content {
+  padding: 144px 0 32px;
+  text-align: left;
+}
+
+.home-header {
+  padding-top: 80px;
+}
+
+.heading {
+  font-size: 2.4em;
+  padding-left: 50px;
+  padding-bottom: 15px;
+}
+
+.heading-name {
+  font-size: 2.4em;
+  text-transform: uppercase;
+  padding-left: 45px;
+}
+
+.main-name {
+  color: #cd5ff8;
+}
+
+@keyframes wave {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(20deg);
+  }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 1s ease-in-out infinite;
+  animation-delay: 0s; /* Opóźnienie przed każdym machaniem */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; /* Powtarzanie animacji w nieskończoność */
+}
+
+.image-hero {
+  max-width: 100%;
+  height: auto;
+  max-height: 450px;
+}
+
+/**/
+
+.typewriter-container {
+  font-size: 1.4rem;
+
+  font-family: "Raleway", serif;
+  white-space: nowrap; /* Utrzymanie tekstu w jednej linii */
+  padding-left: 50px;
+}
+
+.typewriter-text {
+  display: inline-block;
+  border-right: 2px solid #cd5ff8; /* Stylizowanie kropki (caret) */
+  padding-right: 5px;
+  animation: blink 0.5s step-end infinite; /* Migający caret */
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent; /* Miganie caret */
+  }
 }
 
 .home-about-section {
@@ -211,5 +288,9 @@ body {
   .navbar .nav-link,
   .navbar .navbar-brand {
     font-size: 1.9rem;
+  }
+
+  .typewriter-container {
+    font-size: 2.2rem;
   }
 }
