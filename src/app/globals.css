@@ -230,10 +230,11 @@ body {
 
 .typewriter-container {
   font-size: 1.4rem;
-
   font-family: "Raleway", serif;
+  font-weight: bolder;
   white-space: nowrap; /* Utrzymanie tekstu w jednej linii */
-  padding-left: 50px;
+  color: #cd5ff8;
+  padding: 50px;
 }
 
 .typewriter-text {
