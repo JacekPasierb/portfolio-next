@@ -192,7 +192,7 @@ body {
   padding-left: 45px;
 }
 
-.main-name {
+.text-highlight {
   color: #cd5ff8;
 }
 
@@ -255,6 +255,21 @@ body {
 
   padding-bottom: 30px;
   padding-top: 30px;
+}
+
+.home-about-section h2 {
+  font-size: 4.2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.home-about-description {
+ margin-top: 50px;
+}
+
+.home-about-description p {
+font-size: 1.9rem;
+margin-bottom: 20px;
 }
 
 @media (max-width: 767px) {
