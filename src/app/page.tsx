@@ -1,8 +1,69 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import TypewriterEffect from "./components/TypewriterEffect";
+import {useEffect} from "react";
+import {gsap} from "gsap";
 
 export default function Home() {
+  useEffect(() => {
+    const avatarContainer = document.querySelector(".avatar-container");
+
+    if (avatarContainer) {
+      const handleMouseMove = (e: MouseEvent) => {
+        const rect = (e.currentTarget as HTMLElement).getBoundingClientRect();
+        const x = e.clientX - rect.left; // Pozycja kursora w osi X względem kontenera
+        const y = e.clientY - rect.top; // Pozycja kursora w osi Y względem kontenera
+
+        // Obliczanie kątów obrotu
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+
+        // Zwiększenie kąta rotacji, aby efekt był bardziej widoczny
+        const rotateX = ((y - centerY) / centerY) * -30; // Kąt obrotu w osi X
+        const rotateY = ((x - centerX) / centerX) * 30; // Kąt obrotu w osi Y
+
+        gsap.to(avatarContainer, {
+          rotationX: rotateX, // Obrót wokół osi X
+          rotationY: rotateY, // Obrót wokół osi Y
+          duration: 0.3, // Czas trwania animacji
+          ease: "power3.out", // Łagodna animacja
+        });
+      };
+
+      const handleMouseLeave = () => {
+        // Przywracanie początkowego ustawienia po opuszczeniu kontenera
+        gsap.to(avatarContainer, {
+          rotationX: 0,
+          rotationY: 0,
+          duration: 0.3,
+          ease: "power3.out",
+        });
+      };
+
+      avatarContainer.addEventListener(
+        "mousemove",
+        handleMouseMove as EventListener
+      );
+      avatarContainer.addEventListener(
+        "mouseleave",
+        handleMouseLeave as EventListener
+      );
+
+      return () => {
+        avatarContainer.removeEventListener(
+          "mousemove",
+          handleMouseMove as EventListener
+        );
+        avatarContainer.removeEventListener(
+          "mouseleave",
+          handleMouseLeave as EventListener
+        );
+      };
+    }
+  }, []);
+
   return (
     <main>
       <section className="home-section">
@@ -110,7 +171,17 @@ export default function Home() {
               </div>
             </div>
             <div className="myAvatar col-md-4 text-center">
-              <Image src="/avatar.svg" width={217} height={237} alt="avatar" />
+              <div className="avatar-container">
+                {" "}
+                <Image
+                  src="/avatar.svg"
+                  width={217}
+                  height={237}
+                  alt="avatar"
+                  className="avatar"
+                  priority
+                />
+              </div>
             </div>
           </div>
           <div className="row ">
@@ -120,11 +191,27 @@ export default function Home() {
                 Chętnie nawiąże <span className="text-highlight">kontakt</span>{" "}
                 - napisz do mnie!
               </p>
-              <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+              <ul className="home-about-social-links d-flex justify-content-center">
+                <li className="social-icons">
+                  <a href="" className="home-social-icons">
+                    <i className="bi bi-github"></i>
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a href="" className="home-social-icons">
+                    <i className="bi bi-linkedin"></i>
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a href="" className="home-social-icons">
+                    <i className="bi bi-instagram"></i>
+                  </a>
+                </li>
+                <li className="social-icons">
+                  <a href="" className="home-social-icons">
+                    <i className="bi bi-tiktok"></i>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
