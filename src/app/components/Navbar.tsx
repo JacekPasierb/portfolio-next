@@ -3,7 +3,7 @@
 import React, {useEffect, useState} from "react";
 import NavLinks from "../ui/NavLinks";
 
-const Navigation = () => {
+const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   // Nasłuchiwanie na zdarzenie scroll
@@ -25,9 +25,9 @@ const Navigation = () => {
 
   return (
     <nav
-    className={`navbar navbar-expand-md navbar-dark fixed-top  ${
-      isScrolled ? "sticky" : ""
-    }`}
+      className={`navbar navbar-expand-md navbar-dark fixed-top  ${
+        isScrolled ? "sticky" : ""
+      }`}
     >
       <div className="container">
         <a className="navbar-brand" href="#">
@@ -42,11 +42,11 @@ const Navigation = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-           <div className="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
+          <div className="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
@@ -58,4 +58,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default Navbar;

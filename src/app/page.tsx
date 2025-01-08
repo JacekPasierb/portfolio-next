@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import TypewriterEffect from "./components/TypewriterEffect";
 import {useEffect} from "react";
 import {gsap} from "gsap";
+import SocialLinks from "./ui/SocialLinks";
 
 export default function Home() {
   useEffect(() => {
@@ -192,26 +193,7 @@ export default function Home() {
                 - napisz do mnie!
               </p>
               <ul className="home-about-social-links d-flex justify-content-center">
-                <li className="social-icons">
-                  <a href="" className="home-social-icons">
-                    <i className="bi bi-github"></i>
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a href="" className="home-social-icons">
-                    <i className="bi bi-linkedin"></i>
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a href="" className="home-social-icons">
-                    <i className="bi bi-instagram"></i>
-                  </a>
-                </li>
-                <li className="social-icons">
-                  <a href="" className="home-social-icons">
-                    <i className="bi bi-tiktok"></i>
-                  </a>
-                </li>
+                <SocialLinks/>
               </ul>
             </div>
           </div>
