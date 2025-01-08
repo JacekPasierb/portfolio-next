@@ -10,13 +10,14 @@ export default function Home() {
           <div className="row">
             <div className="home-header col-12 col-md-7">
               <h2 className="heading py-4">
-                Hi There!{" "}
+                Witaj !
                 <span className="wave" role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h2>
               <h1 className="heading-name">
-                I'm <strong className="text-highlight">Jacek Pasierb</strong>
+                Nazywam się{" "}
+                <strong className="text-highlight">Jacek Pasierb</strong>
               </h1>
 
               <TypewriterEffect />
@@ -35,13 +36,13 @@ export default function Home() {
       </section>
       <section className="home-about-section">
         <div className="container">
-          <div>
-            <div className=" col-md-8">
+          <div className="row">
+            <div className=" home-about-description col-md-8">
               <h2>
                 Pozwól, <span className="text-highlight"> że się </span>
                 przedstawię
               </h2>
-              <div className="home-about-description">
+              <div className="home-about-body">
                 <p>
                   Fascynuje mnie programowanie, a szczególnie budowanie
                   nowoczesnych aplikacji webowych.
@@ -108,9 +109,25 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="myAvatar col-md-4"></div>
+            <div className="myAvatar col-md-4 text-center">
+              <Image src="/avatar.svg" width={217} height={237} alt="avatar" />
+            </div>
           </div>
-          <div className="social"></div>
+          <div className="row ">
+            <div className="home-about-social text-center">
+              <h2>Znajdź mnie w sieci</h2>
+              <p>
+                Chętnie nawiąże <span className="text-highlight">kontakt</span>{" "}
+                - napisz do mnie!
+              </p>
+              <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </main>
