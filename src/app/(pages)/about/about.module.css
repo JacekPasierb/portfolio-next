@@ -1,0 +1,52 @@
+.aboutSection {
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+.aboutSection h2 {
+  font-size: 4rem;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.aboutSection h4 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.aboutSection p {
+  font-size: 2rem;
+}
+
+.aboutSection ul {
+  padding-left: 32px;
+}
+
+.imageHeroAbout {
+  height: auto;
+  max-width: 100%;
+}
+
+.skillsSection,
+.toolsSection {
+  padding-bottom: 50px;
+}
+
+.projectHeading {
+    font-size: 3.6rem;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+  .cardView,
+  .cardImage {
+    padding-bottom: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .cardImage {
+    padding-top: 120px;
+    padding-bottom: 50px;
+  }
+}
