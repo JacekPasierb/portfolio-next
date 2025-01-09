@@ -369,6 +369,7 @@ ul {
 
 .tech-icons svg {
   font-size: 7.2rem;
+  fill: white;
 }
 @media (max-width: 767px) {
   /* Dotyczy ekranów mniejszych niż 992px */
