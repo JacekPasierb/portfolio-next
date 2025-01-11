@@ -2,29 +2,23 @@
 
 import Link from "next/link";
 import {usePathname} from "next/navigation";
-import React from "react";
+import React, {useEffect} from "react";
+import { links } from "../data/data";
 
-const links = [
-  {name: "Home", href: "/", icon: <i className="bi bi-house-door"></i>},
-  {
-    name: "O mnie",
-    href: "/about",
-    icon: <i className="bi bi-person"></i>,
-  },
-  {
-    name: "Moje projekty",
-    href: "/projects",
-    icon: <i className="bi bi-person-workspace"></i>,
-  },
-  {
-    name: "Moje CV",
-    href: "/resume",
-    icon: <i className="bi bi-file-person"></i>,
-  },
-];
+
 
 const NavLinks = () => {
   const pathname = usePathname();
+  useEffect(() => {
+    const nav = document.querySelector(".navbar-collapse");
+    const hamburger = document.querySelector(".navbar-toggler");
+    document.addEventListener("click", () => {
+      if (nav?.classList.contains("show")) {
+        hamburger?.classList.add("collapsed");
+        nav.classList.remove("show");
+      }
+    });
+  }, []);
 
   return (
     <>

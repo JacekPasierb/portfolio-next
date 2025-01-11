@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js" async></script>
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -29,18 +28,11 @@ export default function RootLayout({
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
         ></link>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
-        />
+     
         <link
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
           rel="stylesheet"
         ></link>
-        <link
-          rel="stylesheet"
-          href="https://unpkg.com/github-calendar@latest/dist/github-calendar-responsive.css"
-        />
       </head>
       <body className={`${raleway.className} `}>
         <ParticlesBackground />

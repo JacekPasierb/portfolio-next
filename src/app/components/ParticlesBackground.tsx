@@ -22,13 +22,8 @@ const ParticlesComponent = () => {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
-
   const options: ISourceOptions = useMemo(
     () => ({
-     
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -70,16 +65,7 @@ const ParticlesComponent = () => {
     []
   );
 
-  return init ? (
-    <Particles
-      id="tsparticles"
-      particlesLoaded={particlesLoaded}
-      options={options}
-    
-    />
-  ) : (
-    <></>
-  );
+  return init ? <Particles id="tsparticles" options={options} /> : <></>;
 };
 
 export default ParticlesComponent;

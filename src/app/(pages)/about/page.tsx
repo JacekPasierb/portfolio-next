@@ -3,7 +3,7 @@ import style from "./about.module.css";
 import Image from "next/image";
 import SkillsList from "../../ui/SkillsList";
 import ToolsList from "../../ui/ToolsList";
-import Cal from "../../components/Cal";
+import Calendar from "../../components/Cal";
 
 const Page = () => {
   return (
@@ -47,7 +47,8 @@ const Page = () => {
                 </li>
               </ul>
               <h4 className="text-muted">
-                'Możesz robić to co lubisz!' <span>- Jacek Pasierb</span>
+                &apos;Możesz robić to co lubisz!&apos;{" "}
+                <span>- Jacek Pasierb</span>
               </h4>
             </div>
           </div>
@@ -58,7 +59,7 @@ const Page = () => {
               height={689}
               className={style.imageHeroAbout}
               alt="hero-about"
-              priority
+            
             />
           </div>
         </section>
@@ -77,13 +78,16 @@ const Page = () => {
 
           <ToolsList />
         </section>
-        <section className={` row`}>
+        <section className={`${style.codeSection} row`}>
           <h2 className={style.projectHeading}>
             Dni Spedzone Na
             <strong className="text-highlight"> Kodowaniu ( 2024 ) </strong>
           </h2>
-          <div>
-            <Cal />
+          <div
+            className="activity-calendar-container py-3"
+            style={{overflow: "hidden", width: "100%"}}
+          >
+            <Calendar />
           </div>
         </section>
       </div>

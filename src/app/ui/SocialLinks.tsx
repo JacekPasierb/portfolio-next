@@ -1,11 +1,7 @@
 import React from "react";
+import { socialLinks } from "../data/data";
 
-const socialLinks = [
-  {name: "GitHub", icon: "bi-github", href: "https://github.com"},
-  {name: "LinkedIn", icon: "bi-linkedin", href: "https://linkedin.com"},
-  {name: "Instagram", icon: "bi-instagram", href: "https://instagram.com"},
-  {name: "TikTok", icon: "bi-tiktok", href: "https://tiktok.com"},
-];
+
 const SocialLinks = () => {
   return (
     <>
