@@ -3,8 +3,9 @@ import style from "./about.module.css";
 import Image from "next/image";
 import SkillsList from "../../ui/SkillsList";
 import ToolsList from "../../ui/ToolsList";
+import Cal from "../../components/Cal";
 
-const page = () => {
+const Page = () => {
   return (
     <main>
       <div className="container">
@@ -46,7 +47,7 @@ const page = () => {
                 </li>
               </ul>
               <h4 className="text-muted">
-                "Możesz robić to co lubisz!" <span>- Jacek Pasierb</span>
+                'Możesz robić to co lubisz!' <span>- Jacek Pasierb</span>
               </h4>
             </div>
           </div>
@@ -57,6 +58,7 @@ const page = () => {
               height={689}
               className={style.imageHeroAbout}
               alt="hero-about"
+              priority
             />
           </div>
         </section>
@@ -75,9 +77,18 @@ const page = () => {
 
           <ToolsList />
         </section>
+        <section className={` row`}>
+          <h2 className={style.projectHeading}>
+            Dni Spedzone Na
+            <strong className="text-highlight"> Kodowaniu ( 2024 ) </strong>
+          </h2>
+          <div>
+            <Cal />
+          </div>
+        </section>
       </div>
     </main>
   );
 };
 
-export default page;
+export default Page;

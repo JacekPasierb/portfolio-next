@@ -371,6 +371,18 @@ ul {
   font-size: 7.2rem;
   fill: white;
 }
+
+.calendar {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+
+  background-color: transparent;
+}
+
+
+
+
 @media (max-width: 767px) {
   /* Dotyczy ekranów mniejszych niż 992px */
   .navbar-collapse {

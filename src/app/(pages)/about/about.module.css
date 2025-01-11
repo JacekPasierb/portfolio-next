@@ -37,6 +37,10 @@
     text-align: center;
 }
 
+.coding {
+  max-width: 100%;
+  height: auto;
+}
 @media (max-width: 767px) {
   .cardView,
   .cardImage {
