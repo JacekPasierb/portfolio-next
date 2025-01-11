@@ -397,6 +397,60 @@ ul {
 .react-activity-calendar .react-activity-calendar__legend-month {
   font-size: 1.2rem;
 }
+/* cv */
+.containerr {
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.downloadButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.downloadButton:hover {
+  background-color: #45a049;
+}
+
+.cvContainer {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  text-align: left;
+}
+
+.cvContainer h1,
+.cvContainer h2 {
+  color: #333;
+}
+
+.cvContainer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.cvContainer ul li {
+  margin: 5px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.cvContainer ul li:before {
+  content: "•";
+  color: #4caf50;
+  position: absolute;
+  left: 0;
+}
 
 @media (min-width: 480px) {
   .activity-calendar-container > div {
