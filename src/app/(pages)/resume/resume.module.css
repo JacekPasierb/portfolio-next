@@ -1,4 +1,13 @@
 .resumeSection {
     padding-top: 110px;
     padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .resume {
+    
+    padding-block: 50px;
   }
