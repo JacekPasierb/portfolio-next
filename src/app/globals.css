@@ -479,6 +479,7 @@ ul {
   color: #fff;
 }
 
+
 @media (min-width: 480px) {
   .activity-calendar-container > div {
     block-size: 12px !important;
