@@ -1,9 +1,8 @@
 import React from "react";
 import style from "./resume.module.css";
 
-import PdfViewer from "../../components/PdfViewer";
-import DownloadCV from "../../ui/DownloadCV";
 import Image from "next/image";
+import Button from "../../ui/Buttons";
 
 const page = () => {
   const images = [
@@ -16,7 +15,11 @@ const page = () => {
     <main>
       <div className="container">
         <section className={`${style.resumeSection}`}>
-          <DownloadCV />
+          <Button
+            title={"Pobierz CV"}
+            icon={<i className="bi bi-download me-2"></i>}
+            link="/PASIERB_CV.pdf"
+          />
           <div className={style.resume}>
             {/* <PdfViewer /> */}
             {/* Wyświetlanie stron CV */}
@@ -36,7 +39,11 @@ const page = () => {
               </div>
             ))}
           </div>
-          <DownloadCV />
+          <Button
+            title={"Pobierz CV"}
+            icon={<i className="bi bi-download me-2"></i>}
+            link="/PASIERB_CV.pdf"
+          />
         </section>
       </div>
     </main>

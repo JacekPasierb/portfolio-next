@@ -18,23 +18,23 @@
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
   color: #fff;
-  transition: all .5s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 .certificatesSection .card:hover {
-box-shadow: 0 4px 4px 5px rgba(129,72,144,.561);
-transform: scale(1.02);
+  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561);
+  transform: scale(1.02);
 }
 .certificatesSection .cardBody {
-padding: 1rem;
+  padding: 1rem;
 }
-.certificatesSection .cardBody h5{
-margin-bottom: 0.5rem;
-font-size: 2rem;
-font-weight: 500;
+.certificatesSection .cardBody h5 {
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 500;
 }
-.certificatesSection .cardBody p{
-margin-bottom: 1rem;
-text-align: justify;
+.certificatesSection .cardBody p {
+  margin-bottom: 1rem;
+  text-align: justify;
 }
 .cardImg {
   width: 100%;
@@ -42,4 +42,23 @@ text-align: justify;
   object-fit: cover;
   padding: 20px;
   border-radius: 10px !important;
+}
+
+.modal-content {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-body img {
+  max-width: 100%;
+  height: auto;
+}
+
+.modal-footer span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.imageCertLg {
+  width: 100%;
+  height: auto;
 }
