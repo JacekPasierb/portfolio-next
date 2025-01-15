@@ -1,12 +1,12 @@
 import React from "react";
-import Card from "./Card";
 import {tools} from "../data/toolsList";
+import CardIcon from "./CardIcon";
 
 const ToolsList = () => {
   return (
     <ul className="row justify-content-center py-3">
       {tools.map((tool) => (
-        <Card key={tool.name} list={tool} />
+        <CardIcon key={tool.name} list={tool} />
       ))}
     </ul>
   );

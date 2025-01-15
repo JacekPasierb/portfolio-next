@@ -2,9 +2,9 @@
 import React, {useState} from "react";
 import style from "./certificates.module.css";
 import {certificates} from "../../data/certyficatesList";
-import Image from "next/image";
 import {Certificate} from "../../types/certificate";
 import ModalCertificate from "../../components/ModalCertificate";
+import Card from "../../ui/Card/Card";
 
 const Page = () => {
   const [show, setShow] = useState(false);
@@ -33,23 +33,7 @@ const Page = () => {
           </p>
           <div className="row row-cols-1 row-cols-lg-3 g-4">
             {certificates.map((cert) => (
-              <div className={`col py-4`} key={cert.title}>
-                <div className={`card h-100 ${style.card}`}>
-                  <Image
-                    src={cert.image}
-                    className={`card-img-top ${style.cardImg}`}
-                    width={600}
-                    height={400}
-                    alt={cert.description}
-                    onClick={() => openModal(cert)}
-                    style={{cursor: "pointer"}}
-                  />
-                  <div className={`card-body ${style.cardBody}`}>
-                    <h5 className="card-title">{cert.title}</h5>
-                    <p className="card-text">{cert.description}</p>
-                  </div>
-                </div>
-              </div>
+              <Card data={cert} openModal={openModal} key={cert.title}/>
             ))}
           </div>
         </section>

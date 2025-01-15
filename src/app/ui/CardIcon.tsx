@@ -1,14 +1,14 @@
 import React from "react";
 
-type CardProps = {
+type CardIconProps = {
   list: {
     name: string;
     icon: React.ReactElement;
   };
 };
 
-const Card: React.FC<CardProps> = ({list}) => {
+const CardIcon: React.FC<CardIconProps> = ({list}) => {
   return <li className="tech-icons  col-md-2 col-4">{list.icon}</li>;
 };
 
-export default Card;
+export default CardIcon;
