@@ -2,8 +2,8 @@ import type {Metadata} from "next";
 import "./globals.css";
 import {raleway} from "./ui/fonts";
 import ParticlesBackground from "./components/ParticlesBackground";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",

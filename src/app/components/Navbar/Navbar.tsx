@@ -1,25 +1,24 @@
 "use client";
 
 import React, {useEffect, useState} from "react";
-import NavLinks from "../ui/NavLinks";
+import NavLinks from "../../ui/NavLinks";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Nasłuchiwanie na zdarzenie scroll
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        setIsScrolled(true); // Ustawienie tła na ciemne, kiedy przewiniesz stronę o więcej niż 50px
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false); // Przywrócenie przezroczystego tła
+        setIsScrolled(false);
       }
     };
 
-    window.addEventListener("scroll", handleScroll); // Dodanie nasłuchiwania na scroll
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll); // Czyszczenie event listenera
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -49,9 +48,7 @@ const Navbar = () => {
           </div>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto">
-            <NavLinks />
-          </ul>
+          <NavLinks />
         </div>
       </div>
     </nav>

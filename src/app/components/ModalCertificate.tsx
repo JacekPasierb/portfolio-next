@@ -4,6 +4,7 @@ import style from "../(pages)/certificates/certificates.module.css";
 import Button from "../ui/Buttons";
 import {ModalCertificateProps} from "../types/modalCertificate";
 
+
 const ModalCertificate: React.FC<ModalCertificateProps> = ({
   show,
   closeModal,

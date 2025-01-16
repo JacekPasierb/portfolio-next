@@ -1,6 +1,6 @@
 import React from "react";
 import { skills } from "../data/skillsList";
-import CardIcon from "./CardIcon";
+import CardIcon from "./CardIcon/CardIcon";
 
 
 

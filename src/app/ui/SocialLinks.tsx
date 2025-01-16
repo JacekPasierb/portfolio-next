@@ -1,10 +1,9 @@
 import React from "react";
-import { socialLinks } from "../data/data";
-
+import {socialLinks} from "../data/data";
 
 const SocialLinks = () => {
   return (
-    <>
+    <ul className="home-about-social-links d-flex justify-content-center">
       {socialLinks.map((link) => (
         <li key={link.name} className="social-icons">
           <a
@@ -17,7 +16,7 @@ const SocialLinks = () => {
           </a>
         </li>
       ))}
-    </>
+    </ul>
   );
 };
 

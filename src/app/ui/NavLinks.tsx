@@ -3,9 +3,7 @@
 import Link from "next/link";
 import {usePathname} from "next/navigation";
 import React, {useEffect} from "react";
-import { links } from "../data/data";
-
-
+import {links} from "../data/data";
 
 const NavLinks = () => {
   const pathname = usePathname();
@@ -21,7 +19,7 @@ const NavLinks = () => {
   }, []);
 
   return (
-    <>
+    <ul className="navbar-nav ms-auto">
       {links.map((link) => (
         <li className="nav-item" key={link.name}>
           <Link
@@ -33,7 +31,7 @@ const NavLinks = () => {
           </Link>
         </li>
       ))}
-    </>
+    </ul>
   );
 };
 

@@ -1,6 +1,6 @@
 import React from "react";
 import {tools} from "../data/toolsList";
-import CardIcon from "./CardIcon";
+import CardIcon from "./CardIcon/CardIcon";
 
 const ToolsList = () => {
   return (

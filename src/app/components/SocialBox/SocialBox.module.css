@@ -1,0 +1,39 @@
+.socialItem {
+  padding-inline: 15px;
+}
+
+.socialList .socialItem i {
+  text-align: center;
+  color: #700c86;
+}
+
+.socialLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.socialLink:hover {
+  box-shadow: 0 0 15px 5px #87209e;
+}
+
+Footer .socialLink {
+  all: unset;
+}
+
+Footer .socialLink:hover {
+  box-shadow: unset;
+}
+
+Footer .socialLink:hover {
+  cursor: pointer;
+}
+
+Footer .socialList .socialItem i {
+  color: #fff;
+}

@@ -4,12 +4,7 @@ import {useEffect, useMemo, useState} from "react";
 import Particles from "@tsparticles/react";
 import {initParticlesEngine} from "@tsparticles/react";
 import {loadSlim} from "@tsparticles/slim"; // Załaduj odpowiednią konfigurację
-import {
-  Container,
-  ISourceOptions,
-  MoveDirection,
-  OutMode,
-} from "@tsparticles/engine"; // Typowanie
+import {ISourceOptions, MoveDirection, OutMode} from "@tsparticles/engine"; // Typowanie
 
 const ParticlesComponent = () => {
   const [init, setInit] = useState(false);

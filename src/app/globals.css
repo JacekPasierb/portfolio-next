@@ -41,7 +41,7 @@ body {
 
 ul {
   list-style: none;
-  padding: 0;
+  padding: 0 !important;
 }
 
 /* Nawigacja */
@@ -62,7 +62,6 @@ ul {
   outline: none;
 }
 
-/* Styl przycisku */
 .custom-toggler {
   border: none;
   background: none;
@@ -70,7 +69,6 @@ ul {
   outline: none;
 }
 
-/* Styl hamburgera */
 .hamburger {
   display: flex;
   flex-direction: column;
@@ -165,101 +163,11 @@ ul {
   margin-right: 5px;
 }
 
-/* Home */
-
-.home-section {
-  background-image: linear-gradient(
-      to bottom left,
-      hsla(0, 3%, 6%, 0.678),
-      rgba(12, 10, 22, 0.863)
-    ),
-    url(../../public/home-bg.dc52d5d40a40b13154b0.jpg);
-  background-position: top;
-  background-repeat: no-repeat;
-
-  padding: 30px 12px;
-  position: relative;
-  z-index: -1;
-}
-
-.home-content {
-  padding: 144px 0 32px;
-  text-align: left;
-}
-
-.home-header {
-  padding-top: 80px;
-}
-
-.heading {
-  font-size: 2.4em;
-  padding-left: 50px;
-  padding-bottom: 15px;
-}
-
-.heading-name {
-  font-size: 2.4em;
-  text-transform: uppercase;
-  padding-left: 45px;
-}
-
 .text-highlight {
   color: #cd5ff8;
 }
 
-@keyframes wave {
-  0%,
-  100% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(-20deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(20deg);
-  }
-}
-
-.wave {
-  display: inline-block;
-  animation: wave 1s ease-in-out infinite;
-  animation-delay: 0s; /* Opóźnienie przed każdym machaniem */
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite; /* Powtarzanie animacji w nieskończoność */
-}
-
-.image-hero {
-  max-width: 100%;
-  height: auto;
-  max-height: 450px;
-}
-
 /**/
-
-.typewriter-container {
-  font-size: 1.4rem;
-  font-family: "Raleway", serif;
-  font-weight: bolder;
-  white-space: nowrap;
-  color: #cd5ff8;
-  padding: 50px;
-}
-
-.typewriter-text {
-  display: inline-block;
-  border-right: 2px solid #cd5ff8;
-  padding-right: 5px;
-  animation: blink 0.5s step-end infinite;
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 
 .home-about-section {
   padding-bottom: 70px;
@@ -318,64 +226,6 @@ ul {
 .home-about-social ul {
   padding-top: 15px;
   margin-bottom: 16px;
-}
-
-.social-icons {
-  padding-inline: 15px;
-}
-
-.home-about-social-links .home-social-icons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  transition: all 0.3s ease-in-out;
-}
-
-.home-about-social-links .home-social-icons:hover {
-  box-shadow: 0 0 15px 5px #87209e;
-}
-
-.home-about-social-links .social-icons i {
-  text-align: center;
-  color: #700c86;
-}
-
-/* Footer */
-.footer {
-  background-color: #0a0416;
-  padding-top: 10px;
-  padding-bottom: 8px;
-}
-
-.footer .social-icons i {
-  color: #ffffff;
-}
-
-.tech-icons {
-  border: 1.7px solid rgba(200, 137, 230, 0.637);
-  border-radius: 5px;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
-  padding: 10px;
-  margin: 10px;
-  text-align: center;
-  font-size: 4.5em;
-  transition: all 0.4s ease 0s;
-}
-
-.tech-icons:hover {
-  border: 2.2px solid rgba(197, 115, 230, 0.883);
-  overflow: hidden;
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
-.tech-icons svg {
-  font-size: 7.2rem;
-  fill: white;
 }
 
 /*Kalendarz */
@@ -479,7 +329,6 @@ ul {
   color: #fff;
 }
 
-
 @media (min-width: 480px) {
   .activity-calendar-container > div {
     block-size: 12px !important;
@@ -517,14 +366,6 @@ ul {
   .navbar .nav-link,
   .navbar .navbar-brand {
     font-size: 1.9rem;
-  }
-
-  .typewriter-container {
-    font-size: 2.2rem;
-  }
-
-  .tech-icons {
-    margin: 15px;
   }
 
   .react-activity-calendar .react-activity-calendar__legend-month {

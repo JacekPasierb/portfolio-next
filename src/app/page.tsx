@@ -1,11 +1,10 @@
 "use client";
-
+import style from "./home.module.css";
 import Image from "next/image";
-import styles from "./page.module.css";
-import TypewriterEffect from "./components/TypewriterEffect";
+import TypewriterEffect from "./components/TypewriterEffect/TypewriterEffect";
 import {useEffect} from "react";
 import {gsap} from "gsap";
-import SocialLinks from "./ui/SocialLinks";
+import SocialBox from "./components/SocialBox/SocialBox";
 
 export default function Home() {
   useEffect(() => {
@@ -67,17 +66,17 @@ export default function Home() {
 
   return (
     <main>
-      <section className="home-section">
-        <div className="container home-content">
+      <section className={style.homeSection}>
+        <div className={`container ${style.content}`}>
           <div className="row">
-            <div className="home-header col-12 col-md-7">
-              <h2 className="heading py-4">
+            <div className={`${style.header} col-12 col-md-7`}>
+              <h2 className="py-4">
                 Witaj !
-                <span className="wave" role="img" aria-labelledby="wave">
+                <span className={style.wave} role="img" aria-labelledby="wave">
                   👋🏻
                 </span>
               </h2>
-              <h1 className="heading-name">
+              <h1>
                 Nazywam się{" "}
                 <strong className="text-highlight">Jacek Pasierb</strong>
               </h1>
@@ -89,7 +88,7 @@ export default function Home() {
                 src="/hero.png"
                 width={450}
                 height={450}
-                className="  image-hero"
+                className={style.imageHero}
                 alt="Screenshots of the dashboard project showing desktop version"
               />
             </div>
@@ -192,9 +191,8 @@ export default function Home() {
                 Chętnie nawiąże <span className="text-highlight">kontakt</span>{" "}
                 - napisz do mnie!
               </p>
-              <ul className="home-about-social-links d-flex justify-content-center">
-                <SocialLinks/>
-              </ul>
+              <SocialBox />
+              {/* <SocialLinks /> */}
             </div>
           </div>
         </div>
