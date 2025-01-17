@@ -25,8 +25,12 @@ const useFetchData = (username: string) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const startDate = "2024-01-10T00:00:00Z";
-      const endDate = new Date().toISOString();
+      const endDateS = new Date();
+      const startDateS = new Date();
+      startDateS.setFullYear(endDateS.getFullYear() - 1);
+
+      const startDate = startDateS.toISOString();
+      const endDate = endDateS.toISOString();
 
       const query = `
         query ($username: String!, $startDate: DateTime!, $endDate: DateTime!) {

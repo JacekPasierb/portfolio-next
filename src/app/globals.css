@@ -1,3 +1,18 @@
+/* === Zmienne globalne === */
+:root {
+  --color-primary: #cd5ff8;
+  --color-secondary: rgba(178, 121, 216, 0.959);
+  --color-secondary-hover: rgba(222, 130, 235, 0.911);
+  --color-background: #1b1429;
+  --color-navbar: #181a27;
+  --color-scrollbar-track: #2d1950;
+  --font-family-base: "Raleway", serif;
+  --font-size-base: 1.6rem;
+  --transition-base: 0.3s ease-in-out;
+}
+
+/* === Reset i podstawowe style === */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -9,33 +24,14 @@ html {
   scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar {
-  width: 7px;
-}
-
-::-webkit-scrollbar-track {
-  background: #2d1950;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
-  border-radius: 12px;
-  border: none;
-  transition: background 0.3s ease;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
-}
-
 body {
-  font-family: "Raleway", serif;
-  font-size: 1.6rem !important;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base) !important;
   position: relative;
   line-height: 1.6;
   background-image: linear-gradient(270deg, #1b1429, #140f23);
   color: #ffffff !important;
-  scrollbar-color: #cd5ff8 #181a27;
+  scrollbar-color: var(--color-primary) var(--color-scrollbar-track);
   scrollbar-width: thin;
 }
 
@@ -44,9 +40,28 @@ ul {
   padding: 0 !important;
 }
 
-/* Nawigacja */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 12px;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-hover);
+}
+
+/* === Nawigacja === */
 .navbar {
-  background-color: #181a27;
+  background-color: var(--color-navbar);
   transition: all 0.8s ease;
 }
 
@@ -83,7 +98,7 @@ ul {
   display: block;
   width: 100%;
   height: 3px;
-  background-color: #cd5ff8;
+  background-color: var(--color-primary);
   border-radius: 2px;
   transition: all 0.3s ease-in-out;
 }
@@ -167,7 +182,7 @@ ul {
   color: #cd5ff8;
 }
 
-/*Kalendarz */
+/* === Kalendarz === */
 .activity-calendar-container {
   display: flex;
   justify-content: center;
@@ -193,65 +208,7 @@ ul {
   font-size: 1.2rem;
 }
 
-/* cv */
-.containerr {
-  text-align: center;
-  margin: 20px auto;
-  padding: 20px;
-}
-
-.downloadButton {
-  background-color: #4caf50;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  border-radius: 5px;
-}
-
-.downloadButton:hover {
-  background-color: #45a049;
-}
-
-.cvContainer {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  text-align: left;
-}
-
-.cvContainer h1,
-.cvContainer h2 {
-  color: #333;
-}
-
-.cvContainer ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.cvContainer ul li {
-  margin: 5px 0;
-  padding-left: 20px;
-  position: relative;
-}
-
-.cvContainer ul li:before {
-  content: "•";
-  color: #4caf50;
-  position: absolute;
-  left: 0;
-}
-
-.resume-img {
-  max-width: 500px;
-}
-
+/* === Przycisk === */
 .button button {
   font-size: 1.6rem;
   line-height: 1.5px;
@@ -269,6 +226,7 @@ ul {
   color: #fff;
 }
 
+/* === Media Queries === */
 @media (min-width: 480px) {
   .activity-calendar-container > div {
     block-size: 12px !important;

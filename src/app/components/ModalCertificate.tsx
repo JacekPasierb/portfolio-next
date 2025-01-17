@@ -45,6 +45,7 @@ const ModalCertificate: React.FC<ModalCertificateProps> = ({
               width={800}
               height={600}
               className={style.imageCertLg}
+              priority
             />
           </div>
           {selectedCert.pages && selectedCert.pages.length > 1 && (

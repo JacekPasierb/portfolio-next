@@ -21,21 +21,17 @@ const page = () => {
             link="/PASIERB_CV.pdf"
           />
           <div className={style.resume}>
-            {/* <PdfViewer /> */}
-            {/* Wyświetlanie stron CV */}
-
             {images.map((image, index) => (
-              <div key={index} className=" mb-4">
-                <div className="w-100 resume-img">
-                  <Image
-                    src={image.src}
-                    alt={image.alt}
-                    width={794} // Szerokość obrazu (piksele)
-                    height={1123} // Wysokość obrazu (piksele)
-                    className="img-fluid"
-                    style={{width: "100%", height: "auto"}} // Ustawienie szerokości na 100% kontenera
-                  />
-                </div>
+              <div key={index} className={`${style.imageWrapper} mb-4`}>
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  width={794}
+                  height={1123}
+                  className="img-fluid"
+                  style={{width: "100%", height: "auto"}}
+                  priority
+                />
               </div>
             ))}
           </div>

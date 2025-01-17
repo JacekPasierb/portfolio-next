@@ -5,7 +5,7 @@ import {Certificate} from "../../types/certificate";
 
 interface CardProps {
   data: Certificate;
-  openModal: (cert: Certificate) => void;
+  openModal?: (cert: Certificate) => void;
 }
 
 const Card: React.FC<CardProps> = ({data, openModal}) => {
@@ -18,8 +18,9 @@ const Card: React.FC<CardProps> = ({data, openModal}) => {
           width={600}
           height={400}
           alt={data.description}
-          onClick={() => openModal(data)}
+          onClick={openModal ? () => openModal(data) : undefined}
           style={{cursor: "pointer"}}
+          priority
         />
         <div className={`card-body ${style.cardBody}`}>
           <h5 className="card-title">{data.title}</h5>
