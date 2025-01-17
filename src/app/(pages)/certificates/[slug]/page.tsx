@@ -32,16 +32,11 @@ const certificateList: Record<string, Certificate> = {
     link: "/certificates/jira",
   },
 };
-// Dynamiczna obsługa strony certyfikatu
-interface CertificateDetailsProps {
-    params: {
-      slug: string;
-    };
-  }
+type Params = Promise<{ slug: string[] }>;
 
-
-const CertificateDetails = ({ params }: CertificateDetailsProps) => {
-    const certificate = certificateList[params.slug];
+const CertificateDetails = async({ params }:{ params: Params }) => {
+    const { slug } = await params;
+    const certificate = certificateList[slug[0]];
     
     if (!certificate) {
     return notFound(); // Zwróć 404, jeśli slug nie pasuje do żadnego certyfikatu
@@ -55,7 +50,5 @@ const CertificateDetails = ({ params }: CertificateDetailsProps) => {
     </div>
   );
 };
-export async function generateStaticParams() {
-    return Object.keys(certificateList).map((slug) => ({ slug }));
-  }
+
 export default CertificateDetails;
