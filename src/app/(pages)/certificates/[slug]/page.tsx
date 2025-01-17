@@ -36,9 +36,10 @@ const certificateList: Record<string, Certificate> = {
 interface PageParams {
   slug: string;
 }
-const CertificateDetails = async ({params}: {params: PageParams}) => {
-  const certificate: Certificate | undefined = certificateList[params.slug];
-  if (!certificate) {
+const CertificateDetails = ({ params }: { params: PageParams }) => {
+    const certificate = certificateList[params.slug];
+    
+    if (!certificate) {
     return notFound(); // Zwróć 404, jeśli slug nie pasuje do żadnego certyfikatu
   }
 
