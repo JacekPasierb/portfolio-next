@@ -1,0 +1,62 @@
+.aboutSection {
+  padding-bottom: 70px;
+  padding-top: 70px;
+}
+
+.aboutSection h2 {
+  font-size: 4.2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.aboutSection .aboutDescription {
+  padding-top: 100px;
+  margin-bottom: 20px;
+}
+
+.aboutBody {
+  padding-top: 50px;
+  font-size: 1.9rem;
+  margin-bottom: 20px;
+}
+
+.avatarWrapper {
+  padding-block: 100px;
+}
+
+.avatarContainer {
+  perspective: 1500px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.avatarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.socialLinks {
+  padding-top: 25px;
+}
+
+.socialLinks h2 {
+  font-size: 3.1rem;
+  margin-bottom: 8px;
+}
+
+.socialLinks p {
+  margin-bottom: 16px;
+}
+
+.socialLinks ul {
+  padding-top: 15px;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 1200px) {
+  .socialLinks h2 {
+    font-size: 4rem;
+  }
+}
