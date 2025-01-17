@@ -42,7 +42,7 @@ interface CertificateDetailsProps {
   export async function generateStaticParams() {
     return Object.keys(certificateList).map((slug) => ({ slug }));
   }
-const CertificateDetails = ({ params }: CertificateDetailsProps) => {
+const CertificateDetails = async({ params }: CertificateDetailsProps) => {
     const certificate = certificateList[params.slug];
     
     if (!certificate) {
