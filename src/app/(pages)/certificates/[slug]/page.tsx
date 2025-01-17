@@ -33,10 +33,12 @@ const certificateList: Record<string, Certificate> = {
   },
 };
 // Dynamiczna obsługa strony certyfikatu
-interface PageParams {
-  slug: string;
-}
-const CertificateDetails = ({ params }: { params: PageParams }) => {
+interface CertificateDetailsProps {
+    params: {
+      slug: string;
+    };
+  }
+const CertificateDetails = ({ params }: CertificateDetailsProps) => {
     const certificate = certificateList[params.slug];
     
     if (!certificate) {
