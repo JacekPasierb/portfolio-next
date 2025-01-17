@@ -38,6 +38,10 @@ interface CertificateDetailsProps {
       slug: string;
     };
   }
+
+  export async function generateStaticParams() {
+    return Object.keys(certificateList).map((slug) => ({ slug }));
+  }
 const CertificateDetails = ({ params }: CertificateDetailsProps) => {
     const certificate = certificateList[params.slug];
     
