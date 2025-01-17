@@ -217,7 +217,7 @@ ul {
   background-color: #623686;
   border-radius: 0.25rem;
   color: #fff;
-  width: 250px;
+
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
 }
 

@@ -31,7 +31,7 @@ const Page = () => {
             Oto <span className="text-highlight">certyfikaty, </span>które
             zdobyłem podczas mojej ścieżki zawodowej i edukacyjnej.
           </p>
-          <div className="row row-cols-1 row-cols-lg-3 g-4">
+          <div className="row row-cols-1 row-cols-lg-3 g-5">
             {certificates.map((cert) => (
               <Card data={cert} openModal={openModal} key={cert.title}/>
             ))}

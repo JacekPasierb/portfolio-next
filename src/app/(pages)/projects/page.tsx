@@ -15,7 +15,7 @@ const page = () => {
             <span className="text-highlight"> największe projekty, </span> nad
             którymi niedawno pracowałem.
           </p>
-          <div className="row row-cols-1 row-cols-lg-3 g-4">
+          <div className="row row-cols-1 row-cols-lg-2 gy-4 gx-5 ">
             {mainProjects.map((project) => (
               <Card data={project} key={project.title} />
             ))}
@@ -26,7 +26,7 @@ const page = () => {
             Kilka mniejszych
             <span className="text-highlight"> projektów.</span>
           </p>
-          <div className="row row-cols-1 row-cols-lg-3 g-4">
+          <div className="row row-cols-1 row-cols-lg-2 gy-4 gx-5 ">
             {projects.map((project) => (
               <Card data={project} key={project.title} />
             ))}
