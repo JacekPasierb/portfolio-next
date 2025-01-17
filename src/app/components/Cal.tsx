@@ -9,7 +9,6 @@ const Calendar = () => {
   const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME!;
   const {data, loading, error, totalContributions, activeDays} =
     useFetchData(username);
-console.log("D",username);
 
   const [blockSize, setBlockSize] = useState(12);
   const [blockMargin, setBlockMargin] = useState(2);
