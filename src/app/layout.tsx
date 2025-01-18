@@ -17,11 +17,18 @@ export const metadata: Metadata = {
     "frontend",
     "backend",
     "web development",
-    "full stack developer"
+    "full stack developer",
   ],
   authors: [{name: "Jacek Pasierb", url: "https://jacekpasierb.netlify.app/"}],
-  viewport: "width=device-width, initial-scale=1.0",
+  
   robots: "index, follow",
+};
+
+export const generateViewport = () => {
+  return {
+    width: "device-width",
+    initialScale: 1,
+  };
 };
 
 export default function RootLayout({

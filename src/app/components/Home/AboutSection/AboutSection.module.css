@@ -55,6 +55,25 @@
   margin-bottom: 16px;
 }
 
+.socialLinks a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease-in-out;
+}
+
+.socialLinks a:hover {
+  color: #cd5ff8;
+}
+
+.socialLinks .socialMail {
+  color: transparent;
+  padding-left: 20px;
+}
+
+.socialLinks a:hover + .socialMail {
+  color: #fff;
+}
+
 @media (min-width: 1200px) {
   .socialLinks h2 {
     font-size: 4rem;

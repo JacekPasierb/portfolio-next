@@ -60,9 +60,10 @@ export default function AboutSection({avatarRef}: AboutSectionProps) {
         <div className="row">
           <div className={`${style.socialLinks} text-center`}>
             <h2>Znajdź mnie w sieci</h2>
-            <p>
+            <p >
               Chętnie nawiążę <span className="text-highlight">kontakt</span> -
-              napisz do mnie!
+              <a href="mailto: jack_byk@o2.pl"> napisz do mnie!</a>
+              <span className={style.socialMail}> jack_byk@o2.pl</span>
             </p>
             <SocialBox />
           </div>
