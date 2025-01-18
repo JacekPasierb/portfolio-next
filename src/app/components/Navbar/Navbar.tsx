@@ -2,6 +2,7 @@
 
 import React, {useEffect, useState} from "react";
 import NavLinks from "../../ui/NavLinks";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,9 +30,9 @@ const Navbar = () => {
       }`}
     >
       <div className="container">
-        <a className="navbar-brand" href="#">
+        <Link className="navbar-brand" href="/">
           JP.
-        </a>
+        </Link>
         <button
           className="custom-toggler navbar-toggler collapsed"
           type="button"
