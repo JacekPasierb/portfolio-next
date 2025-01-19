@@ -20,7 +20,7 @@ export default function AboutSection({avatarRef}: AboutSectionProps) {
         {opacity: 0, x: -1550},
         {
           opacity: 1,
-          x: 10,
+          x: 0,
           duration: 1,
           scrollTrigger: {
             trigger: `.${style.socialLinks}`,
