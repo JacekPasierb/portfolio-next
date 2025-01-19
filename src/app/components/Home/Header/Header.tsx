@@ -12,10 +12,10 @@ export default function Header() {
       gsap.registerPlugin(ScrollTrigger);
       gsap.fromTo(
         `.${style.heroImage}`,
-        {opacity: 0, x: "100vw"},
+        {opacity: 0, x: "100%"},
         {
           opacity: 1,
-          x: 0,
+          x: "0%",
           duration: 1,
           scrollTrigger: {
             trigger: `.${style.heroImage}`,
