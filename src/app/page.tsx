@@ -11,6 +11,7 @@ export default function Home() {
   return (
     <main>
       <Header />
+
       <AboutSection avatarRef={avatarRef} />
     </main>
   );

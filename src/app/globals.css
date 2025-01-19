@@ -33,6 +33,7 @@ body {
   color: #ffffff !important;
   scrollbar-color: var(--color-primary) var(--color-scrollbar-track);
   scrollbar-width: thin;
+  overflow-x: hidden;
 }
 
 ul {
@@ -276,3 +277,6 @@ ul {
     display: block !important;
   }
 }
+
+
+

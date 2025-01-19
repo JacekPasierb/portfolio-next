@@ -1,8 +1,30 @@
+'use client'
+import { useEffect } from "react";
 import TypewriterEffect from "../../TypewriterEffect/TypewriterEffect";
 import style from "./Header.module.css";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export default function Header() {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.fromTo(
+        `.${style.heroImage}`,
+        {opacity: 0, x: 500},
+        {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          scrollTrigger: {
+            trigger: `.${style.heroImage}`,
+            start: "bottom 100%",
+          },
+        }
+      );
+    }
+  }, []);
   return (
     <section className={style.homeSection}>
       <div className={`container ${style.content}`}>
