@@ -9,6 +9,7 @@ const page = () => {
     {src: "/cv-images/cv_page_1.png", alt: "CV - Strona 1"},
     {src: "/cv-images/cv_page_2.png", alt: "CV - Strona 2"},
     {src: "/cv-images/cv_page_3.png", alt: "CV - Strona 3"},
+    {src: "/cv-images/cv_page_4.png", alt: "CV - Strona 4"},
   ];
 
   return (
