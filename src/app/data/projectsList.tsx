@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: "ArthroHard - Strona Produktu 🏪",
+    description:
+      "ArthroHard to responsywna strona produktowa promująca suplement diety dla psów i kotów. Projekt wykorzystuje HTML, CSS i JavaScript do stworzenia intuicyjnego interfejsu użytkownika. Strona oferuje dynamiczne ładowanie produktów z API, popupy z detalami, a także płynne animacje CSS. Została zaprojektowana z myślą o responsywności, zapewniając optymalne doświadczenie na urządzeniach mobilnych i desktopowych.",
+    image: "/projects/arthrohard.png",
+    
+    github: "https://github.com/JacekPasierb/page-as-task",
+    demo: "https://arthrohards.netlify.app/", 
+},
+  {
     title: "NEXT JS - Aplikacja zbudowana z Next.js",
     description:
       "'NEXT JS' to aplikacja stworzona w ramach kursu dotyczącego frameworka Next.js. Aplikacja demonstruje podstawowe i zaawansowane funkcje Next.js, takie jak serwerowe renderowanie (SSR), statyczne generowanie stron (SSG), a także dynamiczne routowanie i integrację z zewnętrznymi API. Korzystając z mocy Next.js, aplikacja umożliwia tworzenie szybkich i zoptymalizowanych stron internetowych. W ramach projektu zaprezentowane zostały również najlepsze praktyki związane z budowaniem nowoczesnych aplikacji webowych, z naciskiem na wydajność, SEO oraz skalowalność.",
