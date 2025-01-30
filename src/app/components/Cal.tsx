@@ -2,20 +2,21 @@
 
 import React, {useState, useEffect} from "react";
 import ActivityCalendar, {ThemeInput} from "react-activity-calendar";
-import useFetchData from "../serviceAPI/github";
 import {updateBlockSize} from "../utils/functionsHelp";
 
-const Calendar = () => {
-  const username = process.env.NEXT_PUBLIC_GITHUB_USERNAME!;
-  const {data, loading, error, totalContributions, activeDays} =
-    useFetchData(username);
+interface Props {
+  data: {date: string; count: number; level: number}[];
+  totalContributions: number;
+  activeDays: number;
+}
 
+const explicitTheme: ThemeInput = {
+  dark: ["#f2e7fe", "#d0bfff", "#a77df2", "#7e57c2", "#4a148c"],
+};
+
+const Calendar = ({data, totalContributions, activeDays}: Props) => {
   const [blockSize, setBlockSize] = useState(12);
   const [blockMargin, setBlockMargin] = useState(2);
-
-  const explicitTheme: ThemeInput = {
-    dark: ["#f2e7fe", "#d0bfff", "#a77df2", "#7e57c2", "#4a148c"],
-  };
 
   useEffect(() => {
     updateBlockSize(setBlockSize, setBlockMargin);
@@ -30,10 +31,6 @@ const Calendar = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-
-  // Warunki renderowania na podstawie stanu
-  if (loading) return <p>Ładowanie danych...</p>;
-  if (error) return <p>Błąd: {error}</p>;
 
   return (
     <ActivityCalendar

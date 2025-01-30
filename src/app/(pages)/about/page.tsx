@@ -4,8 +4,11 @@ import Image from "next/image";
 import SkillsList from "../../ui/SkillsList";
 import ToolsList from "../../ui/ToolsList";
 import Calendar from "../../components/Cal";
+import {fetchGithubContributions} from "../../serviceAPI/github";
 
-const Page = () => {
+const Page = async () => {
+  const {data, totalContributions, activeDays} =
+    await fetchGithubContributions();
   return (
     <main>
       <div className="container">
@@ -59,7 +62,6 @@ const Page = () => {
               height={689}
               className={style.imageHeroAbout}
               alt="hero-about"
-            
             />
           </div>
         </section>
@@ -87,7 +89,11 @@ const Page = () => {
             className="activity-calendar-container py-3"
             style={{overflow: "hidden", width: "100%"}}
           >
-            <Calendar />
+            <Calendar
+              data={data}
+              totalContributions={totalContributions}
+              activeDays={activeDays}
+            />
           </div>
         </section>
       </div>
