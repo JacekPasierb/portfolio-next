@@ -49,6 +49,10 @@ export default function Header() {
               height={450}
               className={style.heroImage}
               alt="Screenshots of the dashboard project showing desktop version"
+              priority
+              quality={80} // 📌 Kompresja obrazu
+              placeholder="blur" // 🔄 Lepsze ładowanie
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg=="
             />
           </div>
         </div>
