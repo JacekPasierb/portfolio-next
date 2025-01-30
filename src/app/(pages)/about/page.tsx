@@ -1,11 +1,11 @@
+import dynamic from "next/dynamic";
 import React from "react";
 import style from "./about.module.css";
 import Image from "next/image";
 import SkillsList from "../../ui/SkillsList";
 import ToolsList from "../../ui/ToolsList";
-import dynamic from "next/dynamic";
-const Calendar = dynamic(() => import("../../components/Cal"), { ssr: false });
 import {fetchGithubContributions} from "../../serviceAPI/github";
+const Calendar = dynamic(() => import("../../components/Cal"), { ssr: false });
 
 const Page = async () => {
   const {data, totalContributions, activeDays} =
