@@ -50,6 +50,7 @@ export const fetchGithubContributions = async () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({query, variables}),
+      next: { revalidate: 86400 }, 
     });
 
     if (!response.ok) {
