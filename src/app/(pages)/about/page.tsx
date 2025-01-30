@@ -1,11 +1,10 @@
-import dynamic from "next/dynamic";
 import React from "react";
 import style from "./about.module.css";
 import Image from "next/image";
 import SkillsList from "../../ui/SkillsList";
 import ToolsList from "../../ui/ToolsList";
 import {fetchGithubContributions} from "../../serviceAPI/github";
-const Calendar = dynamic(() => import("../../components/Cal"), { ssr: false });
+import CalendarWrapper from "../../components/CalendarWrapper";
 
 const Page = async () => {
   const {data, totalContributions, activeDays} =
@@ -90,11 +89,8 @@ const Page = async () => {
             className="activity-calendar-container py-3"
             style={{overflow: "hidden", width: "100%"}}
           >
-            <Calendar
-              data={data}
-              totalContributions={totalContributions}
-              activeDays={activeDays}
-            />
+                        <CalendarWrapper data={data} totalContributions={totalContributions} activeDays={activeDays} />
+
           </div>
         </section>
       </div>
