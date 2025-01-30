@@ -3,7 +3,8 @@ import style from "./about.module.css";
 import Image from "next/image";
 import SkillsList from "../../ui/SkillsList";
 import ToolsList from "../../ui/ToolsList";
-import Calendar from "../../components/Cal";
+import dynamic from "next/dynamic";
+const Calendar = dynamic(() => import("../../components/Cal"), { ssr: false });
 import {fetchGithubContributions} from "../../serviceAPI/github";
 
 const Page = async () => {
