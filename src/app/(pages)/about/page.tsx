@@ -62,6 +62,10 @@ const Page = async () => {
               height={689}
               className={style.imageHeroAbout}
               alt="hero-about"
+              priority
+              quality={80} // 📌 Kompresja obrazu
+              placeholder="blur" // 🔄 Lepsze ładowanie
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg=="
             />
           </div>
         </section>
