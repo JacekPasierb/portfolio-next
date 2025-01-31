@@ -1,13 +1,10 @@
 import type {Metadata} from "next";
 import {raleway} from "./ui/fonts";
-import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import GlobalStyles from "./components/GlobalStyles";
-import dynamic from "next/dynamic";
+import ClientLayout from "./components/ClientLayout";
 
-const ParticlesBackground = dynamic(() => import("./components/ParticlesBackground"), {
-  ssr: false,
-});
+
 export const metadata: Metadata = {
   title: "Jacek Pasierb - Portfolio",
   description:
@@ -58,9 +55,9 @@ export default function RootLayout({
       </head>
       <body className={`${raleway.className} `}>
         <GlobalStyles />
-        <ParticlesBackground />
-        <Navbar />
-        {children}
+        <ClientLayout>
+          {children}
+        </ClientLayout>
         <Footer />
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
