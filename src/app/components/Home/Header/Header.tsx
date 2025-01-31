@@ -52,6 +52,7 @@ export default function Header() {
               priority
               loading="eager"
               quality={75}
+              fetchPriority="high"
             />
           </div>
         </div>
