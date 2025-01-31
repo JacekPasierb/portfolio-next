@@ -57,7 +57,7 @@ const Page = async () => {
           </div>
           <div className={`${style.cardImage} col-12 col-md-5`}>
             <Image
-              src="/hero-about.png"
+              src="/hero-about.webp"
               width={1000}
               height={689}
               className={style.imageHeroAbout}

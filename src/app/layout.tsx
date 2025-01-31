@@ -51,6 +51,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
           rel="stylesheet"
         ></link>
+        <link rel="preload" as="image" href="/hero.webp" type="image/webp" />
       </head>
       <body className={`${raleway.className} `}>
         <ParticlesBackground />

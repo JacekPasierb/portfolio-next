@@ -44,15 +44,14 @@ export default function Header() {
           </div>
           <div className="col-12 col-md-5">
             <Image
-              src="/hero.png"
+              src="/hero.webp"
               width={450}
               height={450}
               className={style.heroImage}
               alt="Screenshots of the dashboard project showing desktop version"
               priority
-              quality={80} // 📌 Kompresja obrazu
-              placeholder="blur" // 🔄 Lepsze ładowanie
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRg=="
+              loading="eager"
+              quality={80}
             />
           </div>
         </div>
