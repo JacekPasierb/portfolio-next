@@ -1,10 +1,10 @@
 .homeSection {
   background-image: linear-gradient(
-      to bottom left,
-      hsla(0, 3%, 6%, 0.678),
-      rgba(12, 10, 22, 0.863)
-    ),
-    url(/home-bg.dc52d5d40a40b13154b0.jpg);
+    to bottom left,
+    hsla(0, 3%, 6%, 0.678),
+    rgba(12, 10, 22, 0.863)
+  ),
+  url(/public/home-bg.webp); /* 🔥 WebP – nowoczesne przeglądarki */
   background-position: top;
   background-repeat: no-repeat;
 
@@ -12,6 +12,18 @@
   position: relative;
   z-index: -1;
   overflow-x: hidden;
+}
+
+/* Fallback dla starszych przeglądarek */
+@supports not (background-image: url(/public/home-bg.webp)) {
+  .homeSection {
+    background-image: linear-gradient(
+        to bottom left,
+        hsla(0, 3%, 6%, 0.678),
+        rgba(12, 10, 22, 0.863)
+      ),
+      url(/public/home-bg.jpg); /* 🛑 JPG dla przeglądarek bez WebP */
+  }
 }
 
 .homeSection .content {
