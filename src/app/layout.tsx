@@ -1,9 +1,8 @@
 import type {Metadata} from "next";
 import {raleway} from "./ui/fonts";
 import Footer from "./components/Footer/Footer";
-import GlobalStyles from "./components/GlobalStyles";
 import ClientLayout from "./components/ClientLayout";
-
+import "./globals.css"
 
 export const metadata: Metadata = {
   title: "Jacek Pasierb - Portfolio",
@@ -54,7 +53,6 @@ export default function RootLayout({
       <link rel="preload" as="image" href="/hero.webp" type="image/webp" fetchPriority="high" />
       </head>
       <body className={`${raleway.className} `}>
-        <GlobalStyles />
         <ClientLayout>
           {children}
         </ClientLayout>
