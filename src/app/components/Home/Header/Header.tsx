@@ -44,7 +44,7 @@ export default function Header() {
           </div>
           <div className="col-12 col-md-5">
             <Image
-              src="/hero.webp"
+              src="/hero.webp?v=2"
               width={450}
               height={450}
               className={style.heroImage}
