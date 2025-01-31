@@ -51,7 +51,7 @@ export default function Header() {
               alt="Screenshots of the dashboard project showing desktop version"
               priority
               loading="eager"
-              quality={80}
+              quality={75}
             />
           </div>
         </div>

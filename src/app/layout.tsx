@@ -1,10 +1,13 @@
 import type {Metadata} from "next";
 import {raleway} from "./ui/fonts";
-import ParticlesBackground from "./components/ParticlesBackground";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import GlobalStyles from "./components/GlobalStyles";
+import dynamic from "next/dynamic";
 
+const ParticlesBackground = dynamic(() => import("./components/ParticlesBackground"), {
+  ssr: false,
+});
 export const metadata: Metadata = {
   title: "Jacek Pasierb - Portfolio",
   description:
