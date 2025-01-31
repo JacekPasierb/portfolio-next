@@ -1,9 +1,9 @@
 import type {Metadata} from "next";
-import "./globals.css";
 import {raleway} from "./ui/fonts";
 import ParticlesBackground from "./components/ParticlesBackground";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import GlobalStyles from "./components/GlobalStyles";
 
 export const metadata: Metadata = {
   title: "Jacek Pasierb - Portfolio",
@@ -54,6 +54,7 @@ export default function RootLayout({
         <link rel="preload" as="image" href="/hero.webp" type="image/webp" />
       </head>
       <body className={`${raleway.className} `}>
+        <GlobalStyles />
         <ParticlesBackground />
         <Navbar />
         {children}
