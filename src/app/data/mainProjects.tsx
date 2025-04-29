@@ -28,6 +28,17 @@ export const mainProjects = [
   },
 
   {
+    title: "SKLEP LUX - Ekskluzywny Sklep Internetowy",
+    description:
+      "'SKLEP LUX' to sklep internetowy, który umożliwia zakupy online ekskluzywnych zegarków. Główna funkcjonalność to możliwość dodawania produktów do koszyka zarówno jako gość, jak i zalogowany klient. Sklep posiada integrację z systemem płatności PayU (sandbox), co pozwala na realizację zamówień online. Projekt wykorzystuje Next.js, MongoDB oraz API do zarządzania produktami i realizacji zamówień, zapewniając szybkie i interaktywne doświadczenie użytkownika. ",
+    image: "/projects/sklep-lux.png",
+  
+    github: "https://github.com/JacekPasierb/sklep-lux",
+ 
+    demo: "https://sklep-lux.netlify.app",
+  },
+
+  {
     title: "FrontStrapi - Aplikacja Frontendowa z Integrająca się z Strapi CMS",
     description:
       "FrontStrapi to aplikacja frontendowa stworzona do integracji z Strapi, popularnym headless CMS (Content Management System), który umożliwia łatwe zarządzanie treściami strony internetowej. Aplikacja ta została zbudowana przy użyciu React i służy jako interfejs użytkownika, który pobiera dane z API Strapi i wyświetla je w formie responsywnej strony. Projekt wykorzystuje Strapi jako system zarządzania treścią (CMS), co umożliwia łatwą modyfikację treści strony przez użytkowników bez konieczności ingerencji w kod. Użytkownicy mogą zarządzać treściami, takimi jak artykuły, obrazy czy dane kontaktowe, bezpośrednio z panelu administracyjnego Strapi.",
