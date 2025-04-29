@@ -17,6 +17,9 @@ export default function CalendarWrapper({
   totalContributions,
   activeDays,
 }: Props) {
+  if (!data || data.length === 0) {
+    return <p className="text-center text-muted">Brak danych do wyświetlenia 😕</p>;
+  }
   return (
     <Calendar
       data={data}
