@@ -84,19 +84,24 @@ const Page = async () => {
 
           <ToolsList />
         </section>
-        <section className={`${style.codeSection} row`}>
-          <h2 className={style.projectHeading}>
-            Dni Spedzone Na
-            <strong className="text-highlight"> Kodowaniu ( 2024 ) </strong>
-          </h2>
-          <div
-            className="activity-calendar-container py-3"
-            style={{overflow: "hidden", width: "100%"}}
-          >
-                        <CalendarWrapper data={data} totalContributions={totalContributions} activeDays={activeDays} />
-
-          </div>
-        </section>
+        {data && (
+          <section className={`${style.codeSection} row`}>
+            <h2 className={style.projectHeading}>
+              Dni Spedzone Na
+              <strong className="text-highlight"> Kodowaniu ( 2024 ) </strong>
+            </h2>
+            <div
+              className="activity-calendar-container py-3"
+              style={{overflow: "hidden", width: "100%"}}
+            >
+              <CalendarWrapper
+                data={data}
+                totalContributions={totalContributions}
+                activeDays={activeDays}
+              />
+            </div>
+          </section>
+        )}
       </div>
     </main>
   );
