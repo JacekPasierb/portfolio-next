@@ -84,7 +84,7 @@ const Page = async () => {
 
           <ToolsList />
         </section>
-        {data && (
+        {data && data.length > 0 && (
           <section className={`${style.codeSection} row`}>
             <h2 className={style.projectHeading}>
               Dni Spedzone Na
